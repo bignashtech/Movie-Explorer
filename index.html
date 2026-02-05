@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Explorer</title>
+
+  <!-- 
+    Google Fonts: 
+    - "Playfair Display" → used for the main heading (gives a cinematic, editorial feel)
+    - "Inter" is avoided per design guidelines; i used "DM Sans" for body text instead
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+  <header>
+    <h1>🎬 Movie Explorer</h1>
+    <button id="themeToggle" aria-label="Toggle dark mode">
+      🌙 Dark Mode
+    </button>
+  </header>
+
+  <main>
+    <!--SEARCH AREA-->
+    <section class="search-area">
+      <div class="input-wrapper">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search movies (e.g. Inception)"
+          autocomplete="off"
+          maxlength="100"
+        />
+        <button id="searchBtn">🔍 Search</button>
+        <button id="clearBtn" class="hidden">✕ Clear</button>
+      </div>
+      <!-- Live character counter → updated on every keystroke -->
+      <p id="charCount" class="char-count">0 characters</p>
+      <!-- Status messages: "Searching…", errors, or "No results" -->
+      <p id="statusMessage" class="status"></p>
+    </section>
+
+    <!--SEARCH RESULTS -->
+    <section id="results">
+      <h2>Search Results</h2>
+      <div id="movieGrid" class="grid"></div>
+    </section>
+
+    <!-- WATCHLIST-->
+    <section id="watchlist-section">
+      <h2>⭐ My Watchlist <span class="watchlist-badge" id="watchlistBadge">0</span></h2>
+      <div id="watchlistGrid" class="grid"></div>
+      <p id="watchlistEmpty" class="empty-msg">
+        Your watchlist is empty. Search and add movies above!
+      </p>
+    </section>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>
