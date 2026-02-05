@@ -5,7 +5,7 @@
 **Movie Explorer** is a simple single-page web application built using **only HTML, CSS, and vanilla JavaScript**.  
 The app allows users to search for movies, view movie details, and create a temporary watchlist during a browsing session.
 
-This project was created to help beginners practice **core JavaScript concepts** such as DOM manipulation, event handling, API fetching, and working with arrays — without using any frameworks.
+This project was created to help me practice **core JavaScript concepts** such as DOM manipulation, event handling, API fetching, and working with arrays — without using any frameworks.
 
 > ⚠️ The watchlist is temporary and will reset when the page is refreshed. This is intentional.
 
